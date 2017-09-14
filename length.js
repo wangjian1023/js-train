@@ -1,3 +1,7 @@
+/**
+ * 2017-09-14         wangjian
+ */
+
 var arr = [1, 2, 3];
 console.log(arr.length);
 
