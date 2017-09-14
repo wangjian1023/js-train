@@ -4,9 +4,9 @@
 
 var arr =('1', '2', '3', '4', '5');
 
-console.log(arr.forEach(function(ele){
-   return ele * 2;
-}))
+arr.forEach(function(ele){
+   console.log(ele * 2);
+})
 
 console.log(arr.map(function(ele){
     return 2 * ele;
