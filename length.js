@@ -1,5 +1,5 @@
 /**
- * 2017-09-14         wangjian
+ * 2017-09-14         WangJian
  */
 
 var arr = [1, 2, 3];
