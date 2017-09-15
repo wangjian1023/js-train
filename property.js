@@ -9,5 +9,6 @@
 };
 for (var key in dd) {
     console.log(key);
-    console.log(`key=${key},value=${dd(key)}`);
-}
+    console.log(`key=${key},value = ${dd[key]}`)
+};
+
