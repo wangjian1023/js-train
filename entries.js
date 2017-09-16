@@ -13,8 +13,9 @@ var o = Object.create(null, {
         writable: true,
         configurable: true,
         value: 'hi',
-        enumerable: true
+        enumerable: false
     }
 });
 console.log(Object.entries(o));
-console.log(o.arr)
+console.log(Object.getOwnPropertyNames(o))
+console.log(Object.keys(o))
