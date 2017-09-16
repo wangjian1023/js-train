@@ -1,7 +1,7 @@
 /**
  *  2017-09-15    WangJian
  */
-
+var device = ['/dev/display','/dev/console']; 
 function open (dev){
     for (var n = 0; n < driver.length; n++){
         if (driver[n].type === dev) {
@@ -58,9 +58,12 @@ var driver =[
 ];   
 
 var td = open('/dev/display');
+if(td >= o){
 write(td, 'hello');
 close(td);
-
+};
 var td = open('/dev/console');
+if(td >= o){
 write(td, 'hello');
 close(td);
+}
