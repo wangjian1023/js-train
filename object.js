@@ -27,7 +27,7 @@ var o = Object.create(null, {
 });
 console.log(`o${typeof o}`);
 console.log(`${Object.getPrototypeOf(o)}`)
-console.log(Object.getOwnPropertyDescriptor(o,`foo`));
+console.log(JSON.stringify(Object.getOwnPropertyDescriptor(o,'foo')));
 o.name = 2;
 console.log(Object.keys(o));
 
