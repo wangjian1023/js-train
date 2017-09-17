@@ -5,7 +5,7 @@
 var o = function () {
 };
 
-o.name = [1, 2, 3];
+o.j = [1, 2, 3];
 o.abj = {
     age: 12,
     sex: 'male'
@@ -17,13 +17,12 @@ o.f = function (){
 Object.defineProperty(o, 'len', {
     enumerable: true,
     configurable: true,
-    get: function() { return this.name.length; }
+    get: function() { return this.j.length; }
 });
 
 console.log(Object.keys(o))
 console.log(Object.getOwnPropertyNames(o))
 
-o.name.length = 10;
-
+o.j.length = 10;
 console.log(o.len);
 
