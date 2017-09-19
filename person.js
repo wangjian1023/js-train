@@ -20,14 +20,14 @@ wang.cd = function(){
 };
 console.log(we.class, wang.cd);
 console.log(typeof we.prototype);
-console.log(we.get)
-console.log(`we.__proto__ == Function.prototype =>${we.__proto__ == Function.prototype}`)
+console.log(we.class())
+console.log(`we.__proto__ === Function.prototype =>${we.__proto__ === Function.prototype}`)
 console.log(we.class.__proto__ === Function.prototype);
 console.log(wang.cd.__proto__ === Function.prototype);
 
-//we.__proto__ = null;
+// we.__proto__ = null;
 console.log(we.getAge());
 we.getAge = function(){
     return this.age + 1;
 }
-console.log(we.getAge());
+console.log(we.getAge(1));
