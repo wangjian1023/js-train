@@ -58,12 +58,12 @@ var driver =[
 ];   
 
 var td = open('/dev/display');
-if(td >= o){
+if(td >= 0){
 write(td, 'hello');
 close(td);
 };
 var td = open('/dev/console');
-if(td >= o){
+if(td >= 0){
 write(td, 'hello');
 close(td);
 }

@@ -8,7 +8,7 @@ var a = function (x){
 
     }
 }
-var b = a(4);
-var c = b(8)
+var b = a(8);
+var c = b(4)
 console.log(c)
   
