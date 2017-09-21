@@ -9,7 +9,7 @@ animal.prototype = {
     breath : true,
     e: 'move',
     broth: function(){
-        console.log('animal.brith')
+        console.log('animal.broth')
     }   
 };
 
@@ -22,7 +22,7 @@ ovipara.prototype = {
         console.log('ovipara.canfly')
 
     }
-}
+};
 
 ovipara.prototype.__proto__ = animal.prototype;
 
@@ -35,7 +35,7 @@ manmal.prototype = {
         console.log(`manmal.latation`)
     }
 
-}
+};
 manmal.prototype.__proto__ = animal.prototype;
 
 function person(){
@@ -75,7 +75,9 @@ var o = Object.create(dog, {
 var a = new person();
 var b = new brid();
 var c = new chicken();
-
+var d = new dog();
 console.log(a.v); 
 a.lactation();
-console.log(o.age)
+console.log(o.age);
+d.broth();
+console.log(typeof Object.create(Function.__proto__,{}));
