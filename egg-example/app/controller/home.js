@@ -30,6 +30,10 @@ module.exports = app => {
     * date() {
       this.ctx.body = yield this.service.home.date();
     }
+    * without() {
+      const w = yield this.service.add.without();
+      this.ctx.body = w;
+    }
   }
   return HomeController;
 };

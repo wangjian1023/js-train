@@ -18,6 +18,9 @@ module.exports = app => {
     * lodash() {
       return 'home.lodash';
     }
+    * without() {
+      return 'homne.without';
+    }
     * date() {
       const d = new Date();
       return `${d.getFullYear()}-${this.format(d.getMonth() + 1)}-${this.format(d.getDate())} ${this.format(d.getHours())}:${this.format(d.getMinutes())}:${this.format(d.getSeconds())}`;

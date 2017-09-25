@@ -14,7 +14,6 @@ module.exports = app => {
       const b = [ 1, 2, 3 ];
       return _.head(b);
     }
-
   }
   return Lodash;
 };
