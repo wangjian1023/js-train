@@ -114,7 +114,7 @@ console.log(`----------------pullAll-----------------------`);
 var array = ['a', 'b', 'c', 'a', 'b', 'c'];
 console.log(_.pullAll(array, 'a', 'c'));
 
-Console.log(`-----------------pullAllBy--------------------`);
+console.log(`-----------------pullAllBy--------------------`);
 var array = [{ 'x': 1 }, { 'x': 2 }, { 'x': 3 }, { 'x': 1 }];
 console.log(_.pullAllBy(array, [{ 'x': 1 }, { 'x': 3 }], 'x'));
 
@@ -138,9 +138,19 @@ console.log(evens);
 
 console.log(`----------------removese-----------------------`);
 var array = [1, 2, 3];
-_.reverse(array);
+console.log(_.reverse(array));
 console.log(array);
 
+console.log(`----------------sortedIndex--------------------`);
+console.log(_.sortedIndex([30, 50], 40));
+
+console.log(`-------------------sortLastIndex----除了它。最高索引-----------`);
+console.log(_.sortedLastIndex([4, 5, 5, 5, 6], 5));
+
+console.log(`----------------sortLastIndexBy--------------------`);
+var objects = [{ 'x': 4 }, { 'x': 5 }];
+console.log(_.sortedLastIndexBy(objects, { 'x': 4 }, function(o) { return o.x; }));
+console.log(_.sortedLastIndexBy(objects, { 'x': 4 }, 'x'));
 
 
 
