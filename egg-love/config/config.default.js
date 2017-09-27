@@ -2,7 +2,13 @@
 
 module.exports = appInfo => {
   const config = exports = {};
+
+  // use for cookie sign key, should change to your own and keep security
+  config.keys = appInfo.name + '_1506131853526_8927';
+
+  // add your config here
   config.middleware = [];
+
   config.security = {
     csrf: {
       ignoreJSON: true,
@@ -19,20 +25,12 @@ module.exports = appInfo => {
       user: 'root',
       // password
       password: '111111',
-      // database
-      database: 'wangjian',
+      database: 'love',
     },
     // load into app, default is open
     app: true,
     // load into agent, default is close
     agent: false,
   };
-
-  // use for cookie sign key, should change to your own and keep security
-  config.keys = appInfo.name + '_1506429553082_8618';
-
-  // add your config here
-  config.middleware = [];
-
   return config;
 };
