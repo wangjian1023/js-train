@@ -15,6 +15,7 @@ module.exports = appInfo => {
     },
   };
   config.mysql = {
+
     // database configuration
     client: {
       // host

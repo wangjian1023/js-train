@@ -2,7 +2,7 @@
  *  2017-09-23      Wang Jian
  */
 
-/*function asyncFunction() {
+function asyncFunction() {
     return new Promise(function (resolve, reject) {
       setTimeout(function () {
         resolve('Async Hello world');
@@ -25,9 +25,9 @@ asyncFunction().then(function (value){
 }).catch(function (error) {
     console.log(`catch -${error}`);
 });    
-*/
 
-function asyncFunction() {
+
+/*function asyncFunction() {
     return new Promise(function (resolve, reject) {
       setTimeout(function () {
         resolve('Async Hello world');
@@ -52,4 +52,4 @@ asyncFunction().then(function (value){
 }).then(function(q){
     console.log(`${q}`);
 });   
- 
+ */
