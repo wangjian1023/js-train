@@ -1,0 +1,1 @@
+.text{display:flex;flex-direction:column;border-style:solid;background-color:gray}.other-button1{background-color:black}.other-button{background-color:blueviolet;display:flex;flex-direction:column}

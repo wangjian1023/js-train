@@ -1,0 +1,115 @@
+<style lang = "less"> 
+.text{
+  display: flex;
+  flex-direction: column;
+  border-style: solid;
+  background-color: gray;
+}
+.other-button1{
+  background-color: black;
+}
+.other-button{
+  background-color: blueviolet;
+  display: flex;
+  flex-direction: column;
+}
+</style>
+
+<template>
+<view>
+ <view class="text">
+   <text>王建</text>
+   <text>男</text>
+   <text>23</text>
+   <text>1995.10.23</text>
+   <text>出生地：天津</text>
+   <text>计算机科学与技术</text>
+   <text>华北电力大学科技学院</text>
+   <text>计算机14K2</text>
+   <button type="按钮" size = 'mini' hover-class="other-button1" > 按钮 </button>
+ </view>
+ <view class="other-button">
+    <button type="按钮2" size = 'mini' hover-class="other-button" @tap = "onTap"> 按钮2 </button>
+    <text>{{age}}</text>
+    <text>{{name}}</text>
+    <text>{{born}}</text>
+    <checkbox-group bindchange="checkboxChange">
+  <label class="checkbox" wx:for="{{items}}">
+    <checkbox class="other-button" value="{{item.name}}" checked="{{item.checked}}"/>{{item.value}}
+  </label>
+</checkbox-group>
+<form bindsubmit="formSubmit" bindreset="formReset">
+  <view class="section section_gap">
+    <view class="section__title">switch</view>
+    <switch name="switch"/>
+  </view>
+  <view class="section section_gap">
+    <view class="section__title">slider</view>
+    <slider name="slider" show-value ></slider>
+  </view>
+
+  <view class="section">
+    <view class="section__title">input</view>
+    <input name="input" placeholder="please input here" />
+  </view>
+  <view class="section section_gap">
+    <view class="section__title">radio</view>
+    <radio-group name="radio-group">
+      <label><radio value="radio1"/>radio1</label>
+      <label><radio value="radio2"/>radio2</label>
+    </radio-group>
+  </view>
+  <view class="section section_gap">
+    <view class="section__title">checkbox</view>
+    <checkbox-group name="checkbox">
+      <label><checkbox value="checkbox1"/>checkbox1</label>
+      <label><checkbox value="checkbox2"/>checkbox2</label>
+    </checkbox-group>
+  </view>
+  <view class="btn-area">
+    <button formType="submit">Submit</button>
+    <button formType="reset">Reset</button>
+  </view>
+</form>
+ </view>
+</view>
+
+</template>
+
+<script>
+  import wepy from 'wepy'
+  
+  export default class Index extends wepy.page {
+    config = {
+      navigationBarTitleText: '档案'
+    }
+    data = {
+      age: 20,
+      name: '123',
+      items: [
+      {name: 'USA', value: '美国'},
+      {name: 'CHN', value: '中国', checked: 'true'},
+      {name: 'BRA', value: '巴西'},
+      {name: 'JPN', value: '日本'},
+      {name: 'ENG', value: '英国'},
+      {name: 'TUR', value: '法国'}
+      ]
+    }
+    onTap() {
+      let self = this
+      self.age++
+    }
+    checkboxChange(e) {
+      console.log('checkbox发生change事件，携带value值为：', e.detail.value)
+    }
+
+    formSubmit(e) {
+      console.log('form发生了submit事件，携带数据为：', e.detail.value)
+    }
+    formReset() {
+      console.log('form发生了reset事件')
+    }
+
+    onload() {}
+  }
+</script>
