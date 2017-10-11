@@ -1,58 +1,116 @@
 
-<view>
- <view class="text">
-   <text>王建</text>
-   <text>男</text>
-   <text>23</text>
-   <text>1995.10.23</text>
-   <text>出生地：天津</text>
-   <text>计算机科学与技术</text>
-   <text>华北电力大学科技学院</text>
-   <text>计算机14K2</text>
-   <button type="按钮" size="mini" hover-class="other-button1"> 按钮 </button>
- </view>
- <view class="other-button">
-    <button type="按钮2" size="mini" hover-class="other-button" bindtap="onTap"> 按钮2 </button>
-    <text>{{age}}</text>
-    <text>{{name}}</text>
-    <text>{{born}}</text>
-    <checkbox-group bindchange="checkboxChange">
-  <label class="checkbox"  wx:for="{{items}}">
-    <checkbox class="other-button" value="{{item.name}}" checked="{{item.checked}}"/>{{item.value}}
-  </label>
-</checkbox-group>
-<form bindsubmit="formSubmit" bindreset="formReset">
-  <view class="section section_gap">
-    <view class="section__title">switch</view>
-    <switch name="switch"/>
-  </view>
-  <view class="section section_gap">
-    <view class="section__title">slider</view>
-    <slider name="slider" show-value/>
-  </view>
+  <view>
+    <view class="box">
+      <box>第一</box>
+      <box>第二</box>
+    </view>  
+    <view class="text">
+      <text>王建</text>
+      <text>男</text>
+      <text>23</text>
+      <text>1995.10.23</text>
+      <text>出生地：天津</text>
+      <text>计算机科学与技术</text>
+      <text>华北电力大学科技学院</text>
+      <text>计算机14K2</text>
+      <button type="按钮" hover-class="other-button1"> 按钮 </button>
+    </view>
+    <view class="other-button">
+      <button type="按钮2" size="mini" hover-class="other-button" bindtap="onTap"> 按钮2 </button>
+      <text>{{age}}</text>
+      <text>{{name}}</text>
+      <text>{{born}}</text>
+      <checkbox-group bindchange="checkboxChange">
+        <label class="checkbox"  wx:for="{{items}}">
+          <checkbox class="other-button" value="{{item.name}}" checked="{{item.checked}}"/>{{item.value}}
+        </label>
+      </checkbox-group>
+      <form bindsubmit="formSubmit" bindreset="formReset">
+        <view class="section section_gap">
+          <view class="section__title">开关</view>
+          <switch name="开关"/>
+        </view>
+        <view class="section section_gap">
+          <view class="section__title">滑动器</view>
+          <slider name="滑动器" show-value/>
+        </view>
 
-  <view class="section">
-    <view class="section__title">input</view>
-    <input name="input" placeholder="please input here"/>
+        <view class="section">
+          <view class="section__title">input</view>
+          <input name="input" placeholder="please input here"/>
+        </view>
+        <view class="section section_gap">
+          <view class="section__title">radio</view>
+          <radio-group name="radio-group">
+            <label>
+              <radio value="收音机1"/>收音机1</label>
+            <label>
+              <radio value="收音机2"/>收音机2</label>
+          </radio-group>
+        </view>
+        <view class="section section_gap">
+          <view class="section__title">checkbox</view>
+          <checkbox-group name="checkbox">
+            <label>
+              <checkbox value="checkbox1"/>checkbox1</label>
+            <label>
+              <checkbox value="checkbox2"/>checkbox2</label>
+          </checkbox-group>
+        </view>
+        <view class="btn-area">
+          <button formType="submit">Submit</button>
+          <button formType="reset">Reset</button>
+        </view>
+      </form>
+      <view class="section">
+        <input placeholder="这是一个可以自动聚焦的input" auto-focus/>
+      </view>
+      <view class="section">
+        <input placeholder="这个只有在按钮点击的时候才聚焦" focus="{{focus}}"/>
+        <view class="btn-area">
+          <button bindtap="bindButtonTap">使得输入框获取焦点</button>
+        </view>
+      </view>
+      <view class="section">
+        <input maxlength="10" placeholder="最大输入长度10"/>
+      </view>
+      <view class="section">
+        <view class="section__title">你输入的是：{{inputValue}}</view>
+        <input bindinput="bindKeyInput" placeholder="输入同步到view中"/>
+      </view>
+      <view class="section">
+        <input bindinput="bindReplaceInput" placeholder="连续的两个1会变成2"/>
+      </view>
+      <view class="section">
+        <input password type="number"/>
+      </view>
+      <view class="section">
+        <input password type="text"/>
+      </view>
+      <view class="section">
+        <input type="digit" placeholder="带小数点的数字键盘"/>
+      </view>
+      <view class="section">
+        <input type="idcard" placeholder="身份证输入键盘"/>
+      </view>
+      <view class="section">
+        <input placeholder-style="color:red" placeholder="占位符字体是红色的"/>
+      </view>
+      <view class="container">
+        <video src="{{src}}"/>
+        <button bindtap="bindButtonTap">获取视频</button>
+      </view>
+      <view class="container">
+        <image src="{{src}}"/>
+        <button bindtap="image">图片</button>
+      </view>
+      <view class="section">
+        <view class="section__title">时间选择器</view>
+        <picker mode="time" value="{{time}}" start="09:01" end="21:01" bindchange="bindTimeChange">
+          <view class="picker">
+            当前选择: {{time}}
+          </view>
+        </picker>
+      </view>
+    </view>
   </view>
-  <view class="section section_gap">
-    <view class="section__title">radio</view>
-    <radio-group name="radio-group">
-      <label><radio value="radio1"/>radio1</label>
-      <label><radio value="radio2"/>radio2</label>
-    </radio-group>
-  </view>
-  <view class="section section_gap">
-    <view class="section__title">checkbox</view>
-    <checkbox-group name="checkbox">
-      <label><checkbox value="checkbox1"/>checkbox1</label>
-      <label><checkbox value="checkbox2"/>checkbox2</label>
-    </checkbox-group>
-  </view>
-  <view class="btn-area">
-    <button formType="submit">Submit</button>
-    <button formType="reset">Reset</button>
-  </view>
-</form>
- </view>
-</view>

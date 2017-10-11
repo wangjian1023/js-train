@@ -9,7 +9,7 @@
 	"compileType": "weapp",
 	"libVersion": "1.5.4",
 	"appid": "touristappid",
-	"projectname": "project",
+	"projectname": "%E7%A4%BC%E7%89%A9%E8%AF%B4",
 	"condition": {
 		"weapp": {
 			"current": -1,
