@@ -10,7 +10,7 @@
   font-size: 10px;
   justify-content: space-between;
   margin: 10px 100px 10px 100px;
-  padding: 1px  10px 2px 2px;
+  padding: 1px 10px 2px 2px;
   align-items: center;
 }
 
@@ -139,8 +139,8 @@
     </view>
 
     <view class="dog">
-      <text @tap = "she" style = "color:{{pink}}; border-bottom:3px solid {{solidpink}}" class="dog">送她</text>
-      <text @tap = "he" style = "color:{{red}}; border-bottom:3px solid {{solidred}}" class="dog">送他</text>
+      <text @tap="she" style="color:{{pink}}; border-bottom:3px solid {{solidred}}" class="dog">送她</text>
+      <text @tap="he" style="color:{{red}}; border-bottom:3px solid {{solidpink}}" class="dog">送他</text>
     </view>
 
     <view class="pop">
@@ -211,9 +211,9 @@ export default class Index extends wepy.page {
     sister: '姐妹/闺蜜',
     mother: '妈妈',
     pink: 'pink',
-    solidpink: 'red',
     red: 'black',
-    solidred: 'black'
+    solidred: 'red',
+    solidpink: 'white'
   }
   methods = {
     she() {
@@ -228,8 +228,9 @@ export default class Index extends wepy.page {
       self.wife = '老婆/女票'
       self.mother = '妈妈'
       self.pink = 'pink'
-      self.solidpink = 'red'
+      self.solidred = 'red'
       self.red = 'black'
+      self.solidpink = 'white'
     },
     he() {
       let self = this
@@ -243,8 +244,9 @@ export default class Index extends wepy.page {
       self.elder = '../image/衬衣.png'
       self.wallet = '../image/钱包.png'
       self.red = 'red'
-      self.solidred = 'red'
+      self.solidpink = 'red'
       self.pink = 'black'
+      self.solidred = 'white'
     }
   }
   onload() { }

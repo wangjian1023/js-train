@@ -10,10 +10,10 @@
   margin: 10px 10px; // 框外上下左右 
   padding: 12px 12px  50px 50px;  // 字之间的间距 上zuo下右
   // margin-top: 13px;
-   //border: 13px solid red;
-  // border-radius: 13px;
+   //border: 13px solid red;//
+  // border-radius: 13px;//弧
   // border-bottom: 13px solid red;
-  // border-top-left-radius: 7px;
+  // border-top-left-radius: 7px;//左虎
   justify-content:  space-between; //平均分配
 }
 .box {
@@ -24,7 +24,7 @@
   align-items: center;
   // margin-top: 13px;
    //border: 13px solid red;
-  // border-radius: 1r3px;
+  // border-radius: 13px;
   border-bottom: 13px solid red;
   //border-top-left-radius: 7px;
   justify-content:  space-between; //平均分配

@@ -1,0 +1,35 @@
+<style lang = "less">
+.text {
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+}
+.fuck {
+  display: flex;
+  align-items: center;
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+}
+</style>
+
+<template>
+
+</template>
+
+<script>
+import wepy from 'wepy'
+
+export default class Index extends wepy.page {
+  config = {
+    navigationBarTitleText: '说口令领红包'
+  }
+  data = {
+
+  }
+  methods = {
+
+  }
+  onload() { }
+}
+</script>

@@ -24,8 +24,8 @@
     </view>
 
     <view class="dog">
-      <text bindtap="she" style="color:{{pink}}; border-bottom:3px solid {{solidpink}}" class="dog">送她</text>
-      <text bindtap="he" style="color:{{red}}; border-bottom:3px solid {{solidred}}" class="dog">送他</text>
+      <text bindtap="she" style="color:{{pink}}; border-bottom:3px solid {{solidred}}" class="dog">送她</text>
+      <text bindtap="he" style="color:{{red}}; border-bottom:3px solid {{solidpink}}" class="dog">送他</text>
     </view>
 
     <view class="pop">

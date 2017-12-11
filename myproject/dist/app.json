@@ -1,1 +1,1 @@
-{"pages":["pages/friend"],"window":{"backgroundTextStyle":"light","navigationBarBackgroundColor":"pink","navigationBarTitleText":"WeChat","navigationBarTextStyle":"black"}}
+{"pages":["pages/doctor","pages/friend","pages/index"],"window":{"backgroundTextStyle":"light","navigationBarBackgroundColor":"pink","navigationBarTitleText":"WeChat","navigationBarTextStyle":"black"}}
